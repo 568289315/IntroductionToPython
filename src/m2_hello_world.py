@@ -35,7 +35,7 @@ print(3067*34227)
 #        by clicking on the blue bars.  ** Try that now. **
 #
 #     b. When you have completed a TO DO, you should change the word
-#          DONE(just let right blue bar go away)
+#          TO DO
 #        to
 #          DONE.
 #        Try it now on line 16 above, and note that its blue bar on
