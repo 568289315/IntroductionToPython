@@ -10,7 +10,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #
 #  You should have RUN the PREVIOUS module and READ its code.
 #  (Do so now if you have not already done so.)
@@ -31,31 +31,30 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 import rosegraphics as rg
 
 window = rg.TurtleWindow()
+hh = rg.SimpleTurtle('turtle')
+hh.pen = rg.Pen('black', 2)
+hh.speed = 0.001
+hh.draw_circle(100)
+for k in range(8):
+  hh.left(45)
+  hh.draw_circle(100)
 
-lanxi = rg.SimpleTurtle('turtle')
-lanxi.pen = rg.Pen('red', 1)
-lanxi.speed = 5
-size = 300
-for k in range(20):
-    lanxi.draw_square(size)
+lanxi=rg.SimpleTurtle('turtle')
+lanxi.pen=rg.Pen('red',8)
+lanxi.speed=5
+lanxi.pen_up()
+lanxi.right(90)
+lanxi.forward(200)
+lanxi.left(90)
+lanxi.pen_down()
+lanxi.draw_circle(200)
+
+for k in range(5):
     lanxi.pen_up()
-    lanxi.right(45)
-    lanxi.forward(10)
-    lanxi.left(45+k)
+    lanxi.right(90)
+    lanxi.forward(15)
+    lanxi.left(90)
     lanxi.pen_down()
-    size = size - 12
+    lanxi.draw_circle(200+15*(k+1))
 
-
-chen = rg.SimpleTurtle('turtle')
-chen.pen = rg.Pen('yellow', 1)
-chen.speed = 5
-size = 300
-for t in range(20):
-    chen.draw_square(size)
-    chen.pen_up()
-    chen.left(45)
-    chen.backward(10)
-    chen.right(45+t)
-    chen.pen_down()
-    size = size - 12
 window.close_on_mouse_click()
